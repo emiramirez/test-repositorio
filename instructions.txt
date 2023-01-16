@@ -41,7 +41,7 @@ git remote add origin https://github.com/emiramirez/test-repositorio.git
 git push -u origin master: para subir los cambios con la rama master
 validar accesos
 Y en contraseña colocar el sshkey de github
-
+No olvidar mandar correo
 
 
 hustle - forzar
