@@ -1,0 +1,47 @@
+git config --global user.name "name"
+git config --global user.email memail@example.com
+git config --global core.editor "code --wait"
+git config --global -e
+git config --global core.autoctrlf true
+1.- Paso largo para eliminar un archivo pasando a la etapa de stage y despues al commit 
+    Si se elimina un archivo: git rm archivio.txt 
+    tenemos que agregarlo al stage: git stage archivo .txt
+    comprometemos el cambio: git commit -m "eliminando archivo.txt"
+2.- Paso corto para eliminar un archivo
+    git rm archivo.txt
+    nota: ya no se tiene que hacer el git add archivio.txt
+para renombrar un archivo: mv archivo1.txt archivo.txt
+despues agregarlos a stage: git stage archivo1.txt archivo.txt
+-----------
+git status -s: muestra de una forma más ordenada
+Si se muestran en rojo es posible que no se hayan agregado los cambios:
+M- modified
+A- Added
+??- No ha sido agregado
+---
+git diff: para mostrar los cambios que hemos realizado de forma visual
+"En el ejemplo se hizo antes de agregar los cambios al stage"//Antes de stage
+git diff --staged:  para ver losc ambios que se encuentran en la etapa de staged //Despues de staged
+-----
+git log --oneline: mostrar el historial con un pequeño hash(identificador del commit) con un mensaje
+---
+crear una rama
+git branch: verificar la rama en la que estamos
+git checkout -b ramaA: crear nueva rama, puede colocarse el nombre del ticket
+git branch: verificar nuevamente la rama.
+--
+cat archivo.txt: para visualizar en la consola lo que tiene el archivo
+---
+para jalar los cambios de la rammaA a la rama master:
+git checkout master 
+git marge ramaA: para ligar los cambios con la ramaA
+-----
+para conectar al repositorio de github
+git remote add origin https://github.com/emiramirez/test-repositorio.git
+git push -u origin master: para subir los cambios con la rama master
+validar accesos
+Y en contraseña colocar el sshkey de github
+
+
+
+hustle - forzar
